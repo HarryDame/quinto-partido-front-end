@@ -1,0 +1,296 @@
+header {
+    font-size: 16px;
+    width: 100%;
+    // height: 700px;
+    background-image: url(/images/foto-camp-2.jpg);
+    background-size: cover;
+    z-index: -1;
+    .cont-reserva {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        h2 {
+            color: rgb(219, 210, 210);
+            font-family: 'Comfortaa', cursive;
+            // font-family: 'Poppins', sans-serif;
+            // text-shadow: -0.5px 0.5px 0 #03f50b70, 0.5px 0.5px 0 #e0311a, 0.5px -0.5px 0 #1ce0da, -0.5px -0.5px 0 #ebe308;
+        }
+        // Prueba boton+++++++++++++++++++++++++++++*************************************************************************************
+        .btn-reservar {
+            position: relative;
+            display: block;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+            max-width: 320px;
+            height: 45px;
+            margin-bottom: 60px;
+            overflow: hidden;
+            color: rgba(255, 255, 255, 1);
+            cursor: pointer;
+            letter-spacing: 1px;
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            transition: all ease 0.5s;
+            background: #10b87a2d;
+            &::after,
+            &::before {
+                width: 80px;
+                height: 200px;
+                content: '';
+                display: block;
+                background: rgba(255, 255, 255, 0.5);
+                transform: rotate(35deg);
+                top: -100px;
+                position: absolute;
+                transition: none;
+                right: -75%;
+                cursor: pointer;
+            }
+            &::before {
+                left: -48%;
+            }
+            &:hover {
+                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+                background: #12c9868f;
+                &::after,
+                &::before {
+                    transform: rotate(45deg), scaleX(130%);
+                    background: rgba(255, 255, 255, 0.1);
+                    transition: all ease 0.5s;
+                }
+                &::after {
+                    right: 130%;
+                }
+                &::before {
+                    left: 130%;
+                }
+            }
+        }
+        // FIN prueba boton**************************************************************++++++++++++++++++++++++++++++++++++++++++++++++
+        .quintoLogo {
+            display: flex;
+            width: 200px;
+            height: 23px;
+            cursor: pointer;
+            &:active {
+                width: 202px;
+                height: 24px;
+            }
+        }
+    }
+    .fondo {
+        position: absolute;
+        width: 100%;
+        // overflow: hidden;
+        right: 0;
+        top: 0px;
+        z-index: -1;
+    }
+    nav {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        height: 90px;
+        width: 100%;
+        // background-color: black;
+        // background-color: #198754;
+        ul {
+            width: 50%;
+            display: flex;
+            // padding-right: 50px;
+            justify-content: space-evenly;
+            align-items: baseline;
+            z-index: 2;
+            li {
+                color: rgb(185, 175, 175);
+                display: flex;
+                cursor: pointer;
+                // font-family: 'Comfortaa', cursive;
+                font-family: 'Poppins', sans-serif;
+                font-weight: normal;
+                &:hover {
+                    transition: ease-in-out 0.5s;
+                    color: rgb(255, 255, 255);
+                }
+                &:active {
+                    transition: ease-in-out 0.1s;
+                    font-size: 15.5px;
+                }
+                &:last-child {
+                    display: flex;
+                    width: 21%;
+                    justify-content: space-around;
+                    align-items: center;
+                    background-color: rgb(0, 0, 0);
+                    border-radius: 3px;
+                    padding: 8px 10px;
+                    color: rgb(194, 189, 189);
+                    transition: ease-in-out 0.5s;
+                    border: .1px solid rgb(255, 253, 253);
+                    // border-right: 1px solid #05fde8;
+                    &:hover {
+                        color: rgb(0, 0, 0);
+                        background-color: rgb(221, 210, 210);
+                        // border: .1px solid rgb(3, 250, 24);
+                    }
+                    &:active {
+                        transition: ease-in-out;
+                        background-color: #00fb865e;
+                        color: white;
+                    }
+                    .fa-user-circle {
+                        color: #13b9ab;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        .logos {
+            display: flex;
+            margin-left: 130px;
+            align-items: center;
+            z-index: 2;
+            .playerLogo {
+                width: 30px;
+                opacity: 70%;
+            }
+            .quintoLogo {
+                display: flex;
+                width: 147px;
+                height: 18px;
+                cursor: pointer;
+                &:active {
+                    transition: all 0.1s;
+                    width: 158px;
+                    height: 19px;
+                }
+            }
+        }
+    }
+}
+
+main {
+    width: 100%;
+    // background-color: rgb(0, 0, 0);
+    // margin-top: 800px;
+    .playerSlide {
+        width: 600px;
+        margin-left: 230px;
+        opacity: 5%;
+    }
+    .slides {
+        width: 100%;
+        height: 340px;
+        .mySlides {
+            object-position: 50% 50%;
+            max-width: none;
+            // margin-top: 650px;
+            position: relative;
+            top: 0px;
+            bottom: 0px;
+            // left: 0px;
+            width: 100%;
+            height: 340px;
+            overflow: hidden;
+            pointer-events: none;
+        }
+    }
+    .sec-1 {
+        background-image: url(/images/img-noise-1.png);
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        background-color: #fff;
+        .sec-1-start {
+            display: flex;
+            width: 100%;
+            align-self: center;
+            align-items: center;
+            justify-content: space-between;
+            flex-flow: row nowrap;
+            border-top: 5px solid rgb(200, 211, 179);
+            .sec-1-title {
+                // background-image: url(/images/yellow-lines-1.png);
+                width: 100%;
+                text-align: center;
+                // font-family: 'Comfortaa', cursive;
+                font-family: 'Poppins', sans-serif;
+                color: #67875d;
+                text-shadow: 0 2px 1px #79a06d, -1px 3px 1px #82ad75, -2px 5px 1px #8ebf80;
+            }
+            img {
+                width: 40px;
+                align-items: center;
+                &:first-child {
+                    margin-left: 40px;
+                }
+                &:last-child {
+                    margin-right: 40px;
+                }
+            }
+        }
+        .camps {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            .select-camp {
+                width: 46%;
+                padding: 20px;
+                margin: 20px;
+                display: flex;
+                // width: 300px;
+                background-color: #028318af;
+                border-radius: 3px;
+                // border: 1px solid rgb(0, 0, 0);
+                box-shadow: 3px 3px 9px rgb(63, 63, 63);
+                max-height: 250px;
+                .camp-text {
+                    // width: 200px;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    h4 {
+                        text-align: center;
+                        color: rgb(244, 248, 3);
+                        border: 1px solid rgb(255, 255, 255);
+                        padding: 1px 10px;
+                        border-radius: 5px;
+                        width: 100%;
+                    }
+                    p {
+                        color: rgb(255, 255, 255);
+                        font-size: 15px;
+                        text-align: center;
+                        border-bottom: 2px solid #fff;
+                        padding-bottom: 10px;
+                    }
+                    .btn-reservar {
+                        // font-family: 'Comfortaa', cursive;
+                        display: flex;
+                        justify-content: center;
+                        align-self: center;
+                        font-family: 'Poppins', sans-serif;
+                        border-radius: 7px;
+                        border: 0;
+                        padding: 7px 15px;
+                        background-color: rgba(223, 252, 231, 0.253);
+                        color: rgb(255, 255, 255);
+                        cursor: pointer;
+                        &:hover {
+                            transition: all .6s;
+                            background-color: rgba(3, 153, 48, 0.692);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
