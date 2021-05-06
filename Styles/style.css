@@ -1,7 +1,8 @@
 header {
   font-size: 16px;
   width: 100%;
-  background-image: url(/images/foto-camp-2.jpg);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(250, 250, 250, 0)), to(black)), url(/images/foto-camp-2.jpg);
+  background: linear-gradient(to top, rgba(250, 250, 250, 0), black), url(/images/foto-camp-2.jpg);
   background-size: cover;
   z-index: -1;
 }
@@ -105,14 +106,6 @@ header .cont-reserva .quintoLogo:active {
   height: 24px;
 }
 
-header .fondo {
-  position: absolute;
-  width: 100%;
-  right: 0;
-  top: 0px;
-  z-index: -1;
-}
-
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,6 +124,9 @@ header nav {
           flex-flow: row wrap;
   height: 90px;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.922);
+  position: fixed;
+  z-index: 3;
 }
 
 header nav ul {
@@ -247,26 +243,9 @@ main .playerSlide {
   opacity: 5%;
 }
 
-main .slides {
-  width: 100%;
-  height: 340px;
-}
-
-main .slides .mySlides {
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
-  max-width: none;
-  position: relative;
-  top: 0px;
-  bottom: 0px;
-  width: 100%;
-  height: 340px;
-  overflow: hidden;
-  pointer-events: none;
-}
-
 main .sec-1 {
-  background-image: url(/images/img-noise-1.png);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 136, 4, 0.185)), to(rgba(0, 0, 0, 0.787))), url(/images/img-noise-1.png);
+  background: linear-gradient(to bottom, rgba(18, 136, 4, 0.185), rgba(0, 0, 0, 0.787)), url(/images/img-noise-1.png);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,6 +255,7 @@ main .sec-1 {
           flex-flow: column nowrap;
   width: 100%;
   background-color: #fff;
+  padding-bottom: 100px;
 }
 
 main .sec-1 .sec-1-start {
@@ -345,10 +325,10 @@ main .sec-1 .camps .select-camp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #028318af;
+  background-color: #000301b4;
   border-radius: 3px;
-  -webkit-box-shadow: 3px 3px 9px #3f3f3f;
-          box-shadow: 3px 3px 9px #3f3f3f;
+  -webkit-box-shadow: 3px 3px 9px #161616;
+          box-shadow: 3px 3px 9px #161616;
   max-height: 250px;
 }
 
@@ -393,14 +373,68 @@ main .sec-1 .camps .select-camp .camp-text .btn-reservar {
   border-radius: 7px;
   border: 0;
   padding: 7px 15px;
-  background-color: rgba(223, 252, 231, 0.253);
+  background-color: rgba(187, 245, 204, 0.226);
   color: white;
   cursor: pointer;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
 }
 
 main .sec-1 .camps .select-camp .camp-text .btn-reservar:hover {
   -webkit-transition: all .6s;
   transition: all .6s;
-  background-color: rgba(3, 153, 48, 0.692);
+  background-color: rgba(199, 241, 212, 0.692);
+  color: #152b01;
+  font-weight: bold;
+}
+
+main .sec-1 .camps .select-camp .camp-text .btn-reservar:active {
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  background-color: #fff;
+}
+
+main .aboutUs-cont {
+  width: 100%;
+  background-color: black;
+}
+
+main .aboutUs-cont .slides {
+  width: 100%;
+  height: 340px;
+}
+
+main .aboutUs-cont .slides .mySlides {
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  max-width: none;
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+main .aboutUs-cont .aboutUs {
+  background-image: url(/images/img-noise-1.png);
+  width: 100%;
+}
+
+main .aboutUs-cont .aboutUs .aboutUs-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .aboutUs-cont .aboutUs .aboutUs-description .image {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+main .aboutUs-cont .aboutUs .aboutUs-description .image img {
+  width: 300px;
+  border-radius: 15px;
 }
 /*# sourceMappingURL=style.css.map */

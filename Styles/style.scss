@@ -2,7 +2,8 @@ header {
     font-size: 16px;
     width: 100%;
     // height: 700px;
-    background-image: url(/images/foto-camp-2.jpg);
+    // background-image: url(/images/foto-camp-2.jpg);
+    background: linear-gradient(to top, rgba(250, 250, 250, 0), rgb(0, 0, 0)), url(/images/foto-camp-2.jpg);
     background-size: cover;
     z-index: -1;
     .cont-reserva {
@@ -82,14 +83,14 @@ header {
             }
         }
     }
-    .fondo {
-        position: absolute;
-        width: 100%;
-        // overflow: hidden;
-        right: 0;
-        top: 0px;
-        z-index: -1;
-    }
+    // .fondo {
+    //     position: absolute;
+    //     width: 100%;
+    //     // overflow: hidden;
+    //     right: 0;
+    //     top: 0px;
+    //     z-index: -1;
+    // }
     nav {
         display: flex;
         flex-wrap: inherit;
@@ -98,8 +99,10 @@ header {
         flex-flow: row wrap;
         height: 90px;
         width: 100%;
-        // background-color: black;
+        background-color: rgba(0, 0, 0, 0.922);
         // background-color: #198754;
+        position: fixed;
+        z-index: 3;
         ul {
             width: 50%;
             display: flex;
@@ -184,29 +187,13 @@ main {
         margin-left: 230px;
         opacity: 5%;
     }
-    .slides {
-        width: 100%;
-        height: 340px;
-        .mySlides {
-            object-position: 50% 50%;
-            max-width: none;
-            // margin-top: 650px;
-            position: relative;
-            top: 0px;
-            bottom: 0px;
-            // left: 0px;
-            width: 100%;
-            height: 340px;
-            overflow: hidden;
-            pointer-events: none;
-        }
-    }
     .sec-1 {
-        background-image: url(/images/img-noise-1.png);
+        background: linear-gradient(to bottom, rgba(18, 136, 4, 0.185), rgba(0, 0, 0, 0.787)), url(/images/img-noise-1.png);
         display: flex;
         flex-flow: column nowrap;
         width: 100%;
         background-color: #fff;
+        padding-bottom: 100px;
         .sec-1-start {
             display: flex;
             width: 100%;
@@ -247,10 +234,10 @@ main {
                 margin: 20px;
                 display: flex;
                 // width: 300px;
-                background-color: #028318af;
+                background-color: #000301b4;
                 border-radius: 3px;
                 // border: 1px solid rgb(0, 0, 0);
-                box-shadow: 3px 3px 9px rgb(63, 63, 63);
+                box-shadow: 3px 3px 9px rgb(22, 22, 22);
                 max-height: 250px;
                 .camp-text {
                     // width: 200px;
@@ -281,13 +268,57 @@ main {
                         border-radius: 7px;
                         border: 0;
                         padding: 7px 15px;
-                        background-color: rgba(223, 252, 231, 0.253);
+                        background-color: rgba(187, 245, 204, 0.226);
                         color: rgb(255, 255, 255);
                         cursor: pointer;
+                        transition: ease-in-out 0.4s;
                         &:hover {
                             transition: all .6s;
-                            background-color: rgba(3, 153, 48, 0.692);
+                            background-color: rgba(199, 241, 212, 0.692);
+                            color: rgb(21, 43, 1);
+                            font-weight: bold;
                         }
+                        &:active {
+                            transition: all .1s;
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .aboutUs-cont {
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        .slides {
+            width: 100%;
+            height: 340px;
+            .mySlides {
+                object-position: 50% 50%;
+                max-width: none;
+                // margin-top: 650px;
+                position: relative;
+                top: 0px;
+                bottom: 0px;
+                // left: 0px;
+                width: 100%;
+                height: 340px;
+                overflow: hidden;
+                pointer-events: none;
+            }
+        }
+        .aboutUs {
+            background-image: url(/images/img-noise-1.png);
+            width: 100%;
+            .aboutUs-description {
+                display: flex;
+                .image {
+                    // background-color: black;
+                    padding: 10px;
+                    border-radius: 5px;
+                    img {
+                        width: 300px;
+                        border-radius: 15px;
                     }
                 }
             }
